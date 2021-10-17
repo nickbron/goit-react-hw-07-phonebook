@@ -1,7 +1,6 @@
 import { Button, Input, Form } from './ContactForm.styled';
 import { toast } from 'react-hot-toast';
-// import { useSelector, useDispatch } from 'react-redux';
-// import actions from '../../redux/actions';
+
 import {
   useFetchContactsQuery,
   useCreateContactMutation,
@@ -22,7 +21,7 @@ const handleSubmit = (e, data, createContact) => {
 };
 
 export default function ContactForm() {
-  const { data, isFetching } = useFetchContactsQuery();
+  const { data } = useFetchContactsQuery();
   const [createContact] = useCreateContactMutation();
 
   return (
